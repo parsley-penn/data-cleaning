@@ -60,7 +60,7 @@ for filename in os.listdir(source_clean):
             scores.append(score)
         #survey_type = raw_input("Plain / Machine / Hand? ")
         for i in range(0,len(scores)):
-            out.write(str(scores[i]))
+            out.write(str(scores[i] / float(len(answer_list)))) # %
             out.write(',')
             out.write(survey_type)
             out.write('\n')
